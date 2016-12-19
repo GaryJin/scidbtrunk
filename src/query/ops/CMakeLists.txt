@@ -159,6 +159,9 @@ set(ops_lib_src
     unfold/UnfoldArray.cpp
     variable_window/LogicalVariableWindow.cpp
     variable_window/PhysicalVariableWindow.cpp
+    circular_window/PhysicalCircularWindow.cpp
+    circular_window/LogicalCircularWindow.cpp
+    circular_window/CircularArray.cpp
     insert/LogicalInsert.cpp
     insert/PhysicalInsert.cpp
     test/splitarray/LogicalSplitArrayTest.cpp
