@@ -1,0 +1,11 @@
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/scidb
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/scidb-prepare-db.sh
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/init-db.sh
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/scidb.py
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/scidb_backup.py
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/bin/scidb_cores
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/share/scidb/meta.sql
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/share/scidb/log4cxx.properties
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/etc/scidb-sample.conf
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/etc/sample_config.ini
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/lib/scidb/modules/prelude.txt

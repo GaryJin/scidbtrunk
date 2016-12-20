@@ -1,0 +1,1 @@
+/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/lib/libscidbclient.so

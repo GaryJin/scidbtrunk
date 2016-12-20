@@ -297,7 +297,7 @@ function revision ()
     pushd ${1}
     if [ -d .git ]; then
 	echo "Extracting revision from git."
-	git svn find-rev master > revision
+	#git svn find-rev master > revision
     elif [ -d .svn ]; then
 	echo "Extracting revision from svn."
 	svn info|grep Revision|awk '{print $2}'|perl -p -e 's/\n//' > revision

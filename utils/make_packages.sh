@@ -99,18 +99,18 @@ VERSION_MAJOR=`awk -F . '{print $1}' version`
 VERSION_MINOR=`awk -F . '{print $2}' version`
 VERSION_PATCH=`awk -F . '{print $3}' version`
 
-if [ -d .git ]; then
-    echo "Extracting revision from git."
-    REVISION=$(git svn find-rev master)
-elif [ -d .svn ]; then
-    echo "Extracting revision from svn."
-    REVISION=$(svn info|grep Revision|awk '{print $2}'|perl -p -e 's/\n//')
-elif [ -f revision ]; then
+#if [ -d .git ]; then
+ #   echo "Extracting revision from git."
+    #REVISION=$(git svn find-rev master)
+#elif [ -d .svn ]; then
+#    echo "Extracting revision from svn."
+#    REVISION=$(svn info|grep Revision|awk '{print $2}'|perl -p -e 's/\n//')
+#elif [ -f revision ]; then
     echo "Extracting revision from file."
     REVISION=$(cat revision)
-else
-    die "Can not extract source control revision."
-fi
+#else
+ #   die "Can not extract source control revision."
+#fi
 popd
 
 echo "Version: $VERSION_MAJOR.$VERSION_MINOR.$VERSION_PATCH"
@@ -136,25 +136,25 @@ if [ $target != "insource" ]; then
     mkdir -p "${build_dir}" "${build_src_dir}" || die mkdir failed
 
     pushd ${scidb_src_dir}
-    if [ -d .git ]; then
-        echo Extracting sources from git
-          git archive HEAD | tar -xC "${build_src_dir}"  || die git archive
-          git diff HEAD > "${build_src_dir}"/local.patch || die git diff
-        pushd "${build_src_dir}"
-            (git apply local.patch && rm local.patch) > /dev/null 2>&1
-        popd
-    elif [ -d .svn ]; then
-        echo Extracting sources from svn
-        svn export --quiet --force . "${build_src_dir}" || die svn export
-	if [ -f revision ]; then
-	    cp revision "${build_src_dir}"
-	fi
-    elif [ -f revision ]; then
+    #if [ -d .git ]; then
+        #echo Extracting sources from git
+          #git archive HEAD | tar -xC "${build_src_dir}"  || die git archive
+          #git diff HEAD > "${build_src_dir}"/local.patch || die git diff
+        #pushd "${build_src_dir}"
+            #(git apply local.patch && rm local.patch) > /dev/null 2>&1
+       #popd
+    #elif [ -d .svn ]; then
+     #   echo Extracting sources from svn
+     #   svn export --quiet --force . "${build_src_dir}" || die svn export
+#	if [ -f revision ]; then
+#	    cp revision "${build_src_dir}"
+#	fi
+ #   elif [ -f revision ]; then
 	mkdir -p ${build_src_dir} || die mkdir ${build_src_dir}
 	cp -a . ${build_src_dir}  || die copy
-    else
-	die "Can not extract source control revision."
-    fi
+  #  else
+#	die "Can not extract source control revision."
+ #   fi
     popd
 
 fi

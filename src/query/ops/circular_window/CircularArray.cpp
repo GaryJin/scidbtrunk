@@ -48,7 +48,7 @@ namespace scidb
 
     //**********************************************************************************//
     // Materialized Window Chunk Iterator
-    MaterializedCWindowChunkIterator::MaterializedCWindowChunkIterator(WindowCircualrArrayIterator const& arrayIterator, WindowCircularChunk const& chunk, int mode)
+    MaterializedCWindowChunkIterator::MaterializedCWindowChunkIterator(WindowCircularArrayIterator const& arrayIterator, WindowCircularChunk const& chunk, int mode)
             : _array(arrayIterator.array),
               _chunk(chunk),
               _aggregate(_array._aggregates[_chunk._attrID]->clone()),
@@ -106,6 +106,8 @@ namespace scidb
                     _currPos ++;
                 }
             }
+            else
+                break;
         }
 
         if(needToCalculate == false)
@@ -123,7 +125,7 @@ namespace scidb
         for (size_t i = 0; i < _nDims; i++)
         {
             windowStart[i] = _currPos - 1;
-            windowEnd[i] = _chunk._array._dimensions[i].getEndMax();
+            windowEnd[i] = _chunk._array._dimensions[i].getEndMax()-_currPos+1;
         }
 
         uint64_t windowStartPos = _chunk.coord2pos(windowStart);
@@ -268,7 +270,7 @@ namespace scidb
         _numToCalculate = std::ceil(_chunk._array._dimensions[0].getEndMax()/2);
         for(size_t i = 0; i < _nDims; i ++)
         {
-            std::min(_numToCalculate,std::ceil(_chunk._array._dimensions[i].getEndMax()/2))
+            std::min(_numToCalculate,(Coordinate)std::ceil(_chunk._array._dimensions[i].getEndMax()/2.0));
         }
 
         _iter = _stateMap.begin();
@@ -716,7 +718,7 @@ namespace scidb
     // Window Array
 
     const std::string WindowCircularArray::PROBE="probe";
-    const std::string WindowArray::MATERIALIZE="materialize";
+    const std::string WindowCircularArray::MATERIALIZE="materialize";
 
     WindowCircularArray::WindowCircularArray(ArrayDesc const& desc, std::shared_ptr<Array> const& inputArray,
                               vector<AttributeID> const& inputAttrIDs, vector<AggregatePtr> const& aggregates, string const& method):

@@ -1,0 +1,3 @@
+repository='external project URL'
+module='http://www.netlib.org/scalapack/scalapack_installer.tgz'
+tag=''

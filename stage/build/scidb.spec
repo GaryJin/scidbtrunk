@@ -10,7 +10,7 @@
 %define debug_package %{nil}
 Name: %{scidb}
 Version: 0
-Release: 
+Release: 9267
 URL: http://scidb.org
 %if %{without insource}
 Source: scidb.tar.gz
@@ -53,7 +53,7 @@ BuildRequires: protobuf-compiler
 BuildRequires: protobuf-java
 BuildRequires: java-1.8.0-openjdk-devel
 BuildRequires: junit
-BuildRequires: git
+#BuildRequires: git
 BuildRequires: pam-devel
 BuildRequires: libcsv-devel
 BuildRequires: openssl-devel

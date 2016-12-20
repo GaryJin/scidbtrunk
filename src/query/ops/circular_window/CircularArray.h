@@ -168,7 +168,7 @@ namespace scidb
 
     };
 
-    class WindowCircualrArrayIterator : public ConstArrayIterator
+    class WindowCircularArrayIterator : public ConstArrayIterator
     {
         friend class WindowCircularChunk;
         friend class MaterializedCWindowChunkIterator;
