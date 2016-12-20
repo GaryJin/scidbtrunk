@@ -1,1 +1,0 @@
-all = ["framework", "blas", "netlib"]

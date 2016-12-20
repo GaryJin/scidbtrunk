@@ -1,3 +1,0 @@
-/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/jdbc/scidb4j.jar
-/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/jdbc/example.jar
-/home/gary/programmer/scidbtrunk/stage/build/rpmbuild/BUILDROOT/scidb-15.7-0-9267.x86_64//opt/scidb/15.7/jdbc/jdbctest.jar
