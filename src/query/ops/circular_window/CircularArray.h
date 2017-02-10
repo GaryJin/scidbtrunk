@@ -50,14 +50,15 @@ namespace scidb
     class MaterializedCWindowChunkIterator;
 
 /**
- *   Used to process data in an input Chunk consumed/processed by window(...)
- *
- *   This structure is used within the window(...) operator to represent the
- *  state of each input data chunk as it is being processed. Access to the
- *  WindowChunk's state is through the WindowChunkIterator classes. Within
- *  the WindowChunk we process cells from the InputChunk, and for each
- *  "window" of cells in the InputChunk (where the size and shape of the
- *  window is taken from the operator's argument list).
+ *  Used to process data in an input Chunk consumed/processed by
+ *  circular_window(...)
+ *  This structure is used within the circular_window(...) operator to
+ *  represent the state of each input data chunk as it is being processed.
+ *  Access to the WindowChunk's state is through the WindowChunkIterator
+ *  classes. Within the WindowChunk we process cells from the InputChunk,
+ *  and for each "circular_window" of cells in the InputChunk (where the
+ *  size and shape of the circular_window is taken from the operator's
+ *  argument list).
  *
  */
     class WindowCircularChunk : public ConstChunk
@@ -76,7 +77,7 @@ namespace scidb
         virtual Array const& getArray() const;
 
         /**
-         *  When using the materialize algorithm, calculate by how much to step the iterator when it leaves the window(...)
+         *  When using the materialize algorithm, calculate by how much to step the iterator when it leaves the circular_window(...)
          */
         inline uint64_t getStep() const;
 
