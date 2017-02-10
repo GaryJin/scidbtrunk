@@ -29,6 +29,7 @@ bin
 SciDB.build
 tests/*
 cmake-build-debug/*
+.idea/
 src/query/parser/AFLParser.cpp
 src/query/parser/AFLParser.hpp
 src/query/parser/AFLScanner.cpp

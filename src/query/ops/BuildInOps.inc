@@ -255,6 +255,11 @@ PHYSICAL_BUILDIN_OPERATOR(PhysicalInsert);
 LOGICAL_BUILDIN_OPERATOR(LogicalVariableWindow);
 PHYSICAL_BUILDIN_OPERATOR(PhysicalVariableWindow);
 
+// circular_window
+LOGICAL_BUILDIN_OPERATOR(LogicalCircularWindow);
+PHYSICAL_BUILDIN_OPERATOR(PhysicalCircularWindow);
+
+
 // splitarraytest
 LOGICAL_BUILDIN_OPERATOR(LogicalSplitArrayTest);
 PHYSICAL_BUILDIN_OPERATOR(PhysicalSplitArrayTest);

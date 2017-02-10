@@ -28,6 +28,7 @@ CMakeScripts
 bin
 SciDB.build
 tests/*
+stage/*
 cmake-build-debug/*
 .idea/
 src/query/parser/AFLParser.cpp
